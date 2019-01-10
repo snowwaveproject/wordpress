@@ -1,0 +1,234 @@
+:root {
+	--color1:#544749;
+    --color2:#03546c;
+    --color3:black;
+    --color4:white;
+    --color5:#ab2814;
+    --color6:rgba(255,255,255,.7);
+    --spacing-small:calc(var(--padding) / 2);
+    --padding:1rem;
+    --spacing-middle:calc((var(--padding) + var(--margin)) / 2);
+    --margin:calc(var(--padding) * 2);
+    --grid:12;
+}
+
+html {
+	font-size: 16px;
+	font-family: 'Asap', sans-serif;
+}
+
+body {
+	margin:0;
+}
+
+/* Tous les éléments */
+* {
+	box-sizing:border-box;  /* Inclus les padding et border dans les dimensions données */
+	transition:all 0.3s ease-in-out;
+}
+
+/* class qui me permet de garder mon site à l'interieur de 1200px et de le centrer dans ma page */
+.container, main > section > div {
+    width: calc(100% - var(--margin));
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* LINK & BUTTON */
+a { display:inline-block; text-decoration:none; color:inherit; }
+
+.btn {
+	padding:var(--spacing-small) var(--spacing-middle);
+	text-transform:uppercase;
+	border: 1px solid var(--color1);
+	font-family: 'Asap', sans-serif;
+	font-size: 0.8rem;
+}
+
+.btn:hover {
+	background-color: var(--color1);
+	color: var(--color4);
+}
+
+.btn > * {
+	vertical-align: middle;
+
+}
+
+/*TYPO*/
+.typo-titre{
+	font-family: 'Asap', sans-serif;
+}
+
+.h2{
+	font-size: 2rem;
+}
+
+.h3 .h4{
+	font-size: 1.5rem;
+}
+
+.h5 {
+	font-size: 1rem;
+}
+
+.h6 {
+	font-size: 0.8rem;
+}
+
+.typo-texte{
+	font-family: 'Rubik', sans-serif;
+	color: var(--color3);
+}
+
+
+/*ICONES RESEAUX SOCIAUX */
+.fab fa-instagram{
+	font-size: 0.8rem;
+}
+
+
+/* LISTE A PUCES */
+li {
+	list-style-type: none;
+}
+
+/* ENTREES DU MENU */
+.picto-menu{
+	height:20px;
+}
+
+.navbar{
+	text-transform:uppercase;
+	color: var(--color3);
+}
+
+.menu {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    flex-wrap: wrap
+}
+    
+div < nav < ul{
+    padding:var(--spacing-small);
+}
+
+
+.searchbar{
+	font-family: 'Asap', sans-serif;
+    border-radius: 2px;
+    border:1px solid var(--color3);
+}
+
+/* TEXTE */
+.ta-left { text-align:left; }
+.ta-right { text-align:right; }
+.ta-center { text-align:center; }
+.ta-justify { text-align:justify; }
+
+
+
+/* TITLES */
+h1,h2,h3,h4{
+    text-transform:uppercase;
+    text-align:center;
+}
+
+h5,h6{
+    text-transform:uppercase;
+}
+
+
+/* WEIGHT */
+.fw-l {font-weight: lighter;}
+.fw-n {font-weight: normal;}
+.fw-b {font-weight: bold;}
+
+
+
+/* BACKGROUND COLORS */
+.bgc1{background-color: var(--color1);}
+.bgc2{background-color: var(--color2);}
+.bgc3{background-color: var(--color3);}
+.bgc4{background-color: var(--color4);}
+.bgc5{background-color: var(--color5);}
+.bgc6{background-color: var(--color6);}
+
+
+
+/* COLORS */
+.c1{color: var(--color1);}
+.c2{color: var(--color2);}
+.c3{color: var(--color3);}
+.c4{color: var(--color4);}
+.c5{color: var(--color5);}
+.c6{color: var(--color6);}
+
+
+.content-snowboard{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;	
+}
+
+
+/* PRODUCTS & ARTICLES */
+.product {
+	padding:var(--padding);
+	position:relative;
+	z-index:1;
+}
+
+.visual {
+	background-size:cover;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+.visual.snow {
+	padding-top:100%;
+	position:relative;
+	overflow:hidden;
+	background-position:top center;
+	margin: calc(var(--padding) * -1) calc(var(--padding) * -1) 0;
+}
+.visual.snow::before {
+	content:"";
+	bottom:0;
+	left:0;
+	right:0;
+	position:absolute;
+	width:100%;
+	height:33vh;
+	max-height:40%;
+	background-color:var(--color1);
+	z-index:-1;
+}
+
+.cadre {
+	padding:var(--spacing-small) var(--spacing-middle);
+	border: 1px solid var(--color4);
+}
+
+/*NEWSLETTER*/
+input[type=submit], input[type=email] {
+    border-radius: 2px;
+    border:1px solid var(--color3);
+    font-family: 'Asap', sans-serif;
+    padding-left: 5px;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+input[type=submit]{
+    width: 130px;
+    margin-right:5px;
+}
+
+footer ul {
+	padding:0;
+}
